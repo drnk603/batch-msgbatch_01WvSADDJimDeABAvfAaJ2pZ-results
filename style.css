@@ -811,9 +811,7 @@ textarea.form-control,
   background-color: var(--color-primary);
 }
 
-.bg-dark {
-  background-color: var(--color-neutral-800);
-}
+
 
 .text-primary {
   color: var(--color-primary-dark);
@@ -1498,4 +1496,26 @@ footer hr {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
   border-radius: var(--border-radius-sm);
+}
+
+/* AUTO-FIX: bg-dark improved contrast */
+.bg-dark > * {
+  color:white!important;
+}
+
+/* AUTO-INJECTED: g-4 layout fix */
+.g-4 > * {
+  width: 100%;
+}
+
+/* --- AUTO-INJECTED: AOS mobile/tablet override --- */
+@media (max-width: 1024px) {
+  [data-aos="fade-left"],
+  [data-aos="fade-right"] {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+  }
+  .c-logo__img {
+    display: none!important;
+  }
 }
